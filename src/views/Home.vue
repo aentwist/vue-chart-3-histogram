@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <BarChart :chartData="chartData" :chartOptions="chartOptions" />
+    <HistogramChart />
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 import { defineComponent } from "@vue/composition-api";
 import { Chart, registerables, ChartData, ChartOptions } from "chart.js";
 import { BarChart } from "vue-chart-3";
+import HistogramChart from "@/components/HistogramChart.vue";
 
 Chart.register(...registerables);
 
@@ -16,6 +18,7 @@ export default defineComponent({
 
   components: {
     BarChart,
+    HistogramChart,
   },
 
   setup() {
